@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a, a:visited {
+  text-decoration: none;
+  color: black; }
+
+.main-choice {
+  display: flex;
+  width: 600px;
+  justify-content: space-evenly; }
+
+.main-choice button {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  background-color: #ff6742;
+  font-size: 20px; }
+
+/*# sourceMappingURL=style.css.map */

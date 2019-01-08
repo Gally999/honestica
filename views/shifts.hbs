@@ -1,0 +1,26 @@
+<h2>
+  Shifts
+</h2>
+
+<div class="add-shifts">
+  <form action="/process-add-shift" method="POST">
+    <input type="date" name="date" placeholder="date">
+    <select name="employee">
+      {{#each employeeArray}}
+      <option value={{this.firstName}}>{{this.firstName}}</option>
+      {{/each}}
+    </select>
+    <button>Add a shift </button>
+  </form>
+</div>
+
+{{#if shiftArray}}
+<div class="shift-list">
+  <h3>List of current shifts</h3>
+  {{#each shiftArray}}
+  <ul class="shift-employee">
+    <li> {{this.shortDate}} - {{this.employee.firstName}}</li>
+  </ul>
+  {{/each}}
+</div>
+{{/if}}

@@ -1,0 +1,28 @@
+<h2>
+  Employees' page
+</h2>
+
+<div class="add-employee">
+  <form action="/process-add-employee" method="POST">
+    <input type="text" name="firstName" placeholder="Name">
+    <select name="status">
+      <option value="Medic">Medic</option>
+      <option value="Interne">Interne</option>
+      <option value="Interim">Interim</option>
+    </select>
+    <button>Add an employee </button>
+  </form>
+</div>
+
+{{#if employeeArray}}
+<div class="employee-list">
+  <h3>List of employees</h3>
+  {{#each employeeArray}}
+  <ul class="one-employee">
+    <li>{{this.firstName}} - {{this.status}}
+      <button><a href="/employee/{{this._id}}/employee-edit">Edit this employee</a></button>
+    </li>
+  </ul>
+  {{/each}}
+</div>
+{{/if}}
